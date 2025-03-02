@@ -9,10 +9,6 @@
 // A successful test should output: All tests passed (12 assertions in 1 test case)
 // A successful test WITH EC should output: All tests passed (15 assertions in 2 test cases)
 /**************************************************************************************************/
-#include <cstdio> 
-#include <io.h>   // Windows equivalent
-#define fileno _fileno
-#define dup2 _dup2
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
