@@ -1,0 +1,22 @@
+CHECKMEM 1       ; Check if memory location 1 exists (possibly ensuring the program has enough memory).
+INSERT 1         ; Insert the value 1 into the next available memory location.
+AT 0             ; Move to memory location 0.
+SET 1            ; Set the value at memory location 0 to 1.
+INSERT 2         ; Insert the value 2 into the next available memory location.
+CLEAR 0          ; Clear (reset) the value at memory location 0.
+ADDCONST 1       ; Add 1 to the current value in memory.
+SET 2            ; Store the result in memory location 2.
+AT 1             ; Move to memory location 1.
+JUMPZERO 8       ; If the value at memory location 1 is 0, jump 8 steps forward.
+SUBCONST 1       ; Subtract 1 from the current memory value.
+SET 1            ; Store the updated value back into memory location 1.
+AT 2             ; Move to memory location 2.
+MULCONST 2       ; Multiply the current value by 2.
+SET 2            ; Store the result back into memory location 2.
+JUMPREL -7       ; Jump back 7 steps to continue looping.
+NOOP             ; No operation (possibly for alignment or delay).
+AT 2             ; Move to memory location 2.
+SUBCONST 1       ; Subtract 1 from the value at memory location 2.
+SET 2            ; Store the updated value back into memory location 2.
+ERASE 1          ; Erase the value at memory location 1.
+HALT 0           ; Stop program execution.
